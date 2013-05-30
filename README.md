@@ -5,4 +5,5 @@
 ## [fetch svn updates](./fetch-updates.md)
 ## [merge a branch](./merge-branch.md)
 ## [commit to svn repo](./commit-svn.md)
+## [workflows](./workflows.md)
 ## [known issues](./known-issues.md)
