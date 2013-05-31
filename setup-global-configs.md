@@ -9,3 +9,6 @@
 ## 设置: 将本地提交推送到远端SVN仓库时添加上svn:mergeinfo信息
 
     git config --global svn.pushmergeinfo true
+## 设置: git pull时总是以rebase代替merge
+
+    git config --global branch.autosetuprebase always
