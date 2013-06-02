@@ -12,3 +12,6 @@
 ## 设置: git pull时总是以rebase代替merge
 
     git config --global branch.autosetuprebase always
+## 设置: git命令行输出时对终端着色
+
+    git config --global color.ui true
