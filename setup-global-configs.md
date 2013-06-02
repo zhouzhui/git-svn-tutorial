@@ -3,6 +3,13 @@
 
     git config --global user.name $your_name
     git config --global user.email $your_email
+## 设置: 检出及提交时对换行符的处理
+**Windows:**
+
+    git config --global core.autocrlf true
+**Mac&Ubuntu:**
+
+    git config --global core.autocrlt input
 ## 设置: 全局的文件过滤列表（gitignore，类似svnignore）
 
     git config --global core.excludesfile $ignore_conf_file_path
