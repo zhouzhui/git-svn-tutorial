@@ -3,6 +3,7 @@
 ## [setup global configs](./setup-global-configs.md)
 ## [import a project from svn repo](./import-svn.md)
 ## [fetch svn updates](./fetch-updates.md)
+## [create a svn branch](./create-svn-branch.md)
 ## [merge a branch](./merge-branch.md)
 ## [commit to svn repo](./commit-svn.md)
 ## [workflows](./workflows.md)
