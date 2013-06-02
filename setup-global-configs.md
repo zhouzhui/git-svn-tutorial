@@ -15,3 +15,13 @@
 ## 设置: git命令行输出时对终端着色
 
     git config --global color.ui true
+## 设置: 查看当前分支所跟踪的远端分支
+
+    git config --global alias.show-tracking '!sh -c "
+    git for-each-ref --format=\"%(refname:short)\" refs/heads/* | while read branch; do if remote=\$(git config --get branch.\$branch.remote); then merge=\$(git config --get branch.\$branch.merge); echo \"\$branch tracks \$remote/\${merge##*/}\"; fi; done 
+    " -'
+## 设置: 查看所有跟踪的远端分支
+
+    git config --global alias.show-all-trackings '!sh -c "
+    git for-each-ref --format=\"%(refname:short)\" refs/heads/* | while read branch; do upstream=\$(git rev-parse --abbrev-ref \$branch@{upstream} 2>/dev/null); if [[ \$? == 0 ]]; then echo \"\$branch tracks \$upstream\"; else echo \"\$branch has no upstream configured\"; fi; done
+    " -'
