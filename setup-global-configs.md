@@ -9,7 +9,7 @@
     git config --global core.autocrlf true
 **Mac&Ubuntu:**
 
-    git config --global core.autocrlt input
+    git config --global core.autocrlf input
 ## 设置: 全局的文件过滤列表（gitignore，类似svnignore）
 
     git config --global core.excludesfile $ignore_conf_file_path
