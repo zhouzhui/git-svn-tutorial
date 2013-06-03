@@ -12,7 +12,7 @@
     |- |- br2
 ```
 ```
-    git svn clone $url_to_project_path -s $local_project_path
+    git svn clone $url_to_project_path -s --prefix=svn/ $local_project_path
 ```
 
 ## 非标准SVN项目结构:
@@ -29,7 +29,7 @@
 ### step 1:
 
 ```
-    git svn init $url_to_project_path -T baseline -b branches $local_project_path
+    git svn init $url_to_project_path -T baseline -b branches --prefix=svn/ $local_project_path
 ```
 ### step 2:
 
@@ -39,19 +39,19 @@
 将
 
 ```
-    fetch = $project/baseline:refs/remotes/trunk
+    fetch = $project/baseline:refs/remotes/svn/trunk
 ```
 修改为
 
 ```
-    fetch = $project/baseline:refs/remotes/baseline
+    fetch = $project/baseline:refs/remotes/svn/baseline
 ```
 并增加
 
 ```
     [svn-remote "release"]
         url = $svn_url_to_project_parent
-        fetch = $project/trunk:refs/remotes/trunk
+        fetch = $project/trunk:refs/remotes/svn/trunk
 ```
 ### step 3:
 获取代码
@@ -71,5 +71,5 @@
     |- doc
 ```
 ```
-   git svn clone $url_to_doc_path $local_doc_path
+   git svn clone $url_to_doc_path --prefix=svn/ $local_doc_path
 ```
