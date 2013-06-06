@@ -6,11 +6,11 @@
          ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"  
   3. 初始化 `Homebrew`:
   
-         brew doctor  
-         sudo brew update  
+        brew doctor  
+        brew update  
   4. 安装 `git` & `svn`:
   
-         sudo brew install git svn  
+        brew install git subversion  
 
 * **Ubuntu:**
   1. 安装 `git` & `svn` & `git-svn`::
