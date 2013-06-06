@@ -1,28 +1,29 @@
 ## 安装git-svn
 * **Mac:**
-  1. 安装 `Homebrew`:
+  1. 安装 [Command Line Tools for XCode](https://developer.apple.com/downloads/index.action)  
+  2. 安装 `Homebrew`:
 
-         ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-  2. 初始化 `Homebrew`:
+         ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"  
+  3. 初始化 `Homebrew`:
   
-         brew doctor
-         sudo brew update
-  3. 安装 `git` & `svn`:
+         brew doctor  
+         sudo brew update  
+  4. 安装 `git` & `svn`:
   
-         sudo brew install git svn
+         sudo brew install git svn  
 
 * **Ubuntu:**
   1. 安装 `git` & `svn` & `git-svn`::
   
-         sudo add-apt-repository ppa:git-core/ppa
-         sudo apt-get update
-         sudo apt-get install git subversion git-svn
+         sudo add-apt-repository ppa:git-core/ppa  
+         sudo apt-get update  
+         sudo apt-get install git subversion git-svn  
   
   **注1:** 若无法安装 `git-svn`, 可在 `http://www.ubuntuupdates.org/pm/git-svn` 根据安装的 `Ubuntu` 版本及 `git` 版本选择相应的安装包下载安装  
-  **注2:** 强烈建议安装git 1.8以上版本，git 1.7版本需要另外编译安装 [git-credential-helper](https://github.com/pah/git-credential-helper)
+  **注2:** 强烈建议安装git 1.8以上版本，git 1.7版本需要另外编译安装 [git-credential-helper](https://github.com/pah/git-credential-helper)  
 
 * **Windows:**
-  1. 安装 [msysgit](https://msysgit.googlecode.com/files/Git-1.8.1.2-preview20130201.exe)
+  1. 安装 [msysgit](https://msysgit.googlecode.com/files/Git-1.8.1.2-preview20130201.exe)  
 
 ## 设置SVN认证信息
 若 `${user.home}` 目录下不存在 `.subversion` 目录
